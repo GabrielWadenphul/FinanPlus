@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Finan+ | Meu Perfil</title>
+    <link rel="stylesheet" href="perfil.css">
+</head>
+<body>
+<div class="Hero">
+    <h1>Bem vindo à Finan+</h1>
+</div>
+
+<div class="Topbar">
+    <h1>Gerenciamento de Perfil</h1>
+    <p>Visualize e edite suas informações pessoais</p>
+</div>
+
+<div class="container-cards">
+
+    <div class="Card">
+
+        <div class="Email">
+            <h2>⚙️ Dados da Conta</h2>
+            <label class="Textos" for="email">E-mail:
+            </label>
+            <input class="Input-email" type="text" id="email"
+                   maxlength="50" minlength="3" rows="1" cols="30" placeholder="Digite aqui...">
+            </textarea">
+        </div>
+        <br>
+
+        <div class="Confirmar">
+            <label class="Textos" for="novaSenha">Nova Senha:
+            </label>
+            <input id="novaSenha" type="password" name="novaSenha" placeholder="Digite aqui..." required>
+        </div>
+
+        <div class="Campo">
+            <label class="Confirmar-label" for="confirmar">
+                Confirmar Senha:
+            </label>
+            <input id="confirmar" type="password" name="confirmarSenha" placeholder="Digite aqui..." required>
+        </div>
+        <div class="Atualizar-container">
+            <button class="Atualizar">Atualizar Acesso</button>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="Card-Perfis">
+
+        <div class="Email">
+            <h2>🏢 Gerenciar Perfis Vinculados</h2>
+        </div>
+
+        <div class="Tabela-Container">
+            <div>
+                <table class="Tabela">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Data</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Valor</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>01/04</td>
+                        <td>Supermercado</td>
+                        <td>Alimentação</td>
+                        <td><button class="Gerenciar">Gerenciar</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>02/04</td>
+                        <td>Padaria</td>
+                        <td>Alimentação</td>
+                        <td><button class="Gerenciar">Gerenciar</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>03/04</td>
+                        <td>Uber</td>
+                        <td>Transporte</td>
+                        <td><button class="Gerenciar">Gerenciar</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>04/04</td>
+                        <td>Lanche</td>
+                        <td>Alimentação</td>
+                        <td><button class="Gerenciar">Gerenciar</button></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</div>
+</div>
+<br>
+
+<div class="container-cards">
+
+    <div class="Card-Perfil">
+        <h2>👤 Dados do Perfil Atual</h2>
+
+        <div class="Linha">
+            <div>
+                <label class="Textos">Nome Completo:</label>
+                <input class="Input-perfil" type="text" id="nome" placeholder="Digite aqui...">
+            </div>
+
+            <div>
+                <label class="Textos">Ocupação:</label>
+                <input class="Input-perfil" id="ocupacao" type="text" placeholder="Digite aqui...">
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <div class="Linha">
+            <div>
+                <label class="Textos">Data de Nascimento:</label>
+                <input class="Input-perfil" id="dataNascimento" type="text" placeholder="Digite aqui...">
+            </div>
+
+            <div>
+                <label class="Textos">CPF:</label>
+                <input class="Input-perfil" id="cpf" type="text" placeholder="Digite aqui...">
+            </div>
+        </div>
+
+        <div class="Atualizar-container">
+            <button class="Atualizar">Salvar Alterações</button>
+        </div>
+
+        <div class="Excluir-container">
+            <button class="Excluir">Excluir Perfil</button>
+        </div>
+    </div>
+</div>
+
+<div class="Secao">
+    <div class="Botao-container">
+        <p class="Menu">Menu</p>
+        <button class="Botao" onClick="location.href='dashboard.html'">
+            <img src="img/dashboard.png" alt="Ícone" class="Icone">
+            Dashboard
+        </button>
+        <button class="Botao">
+            <img src="img/money.png" alt="Ícone" class="Icone">
+            Transações
+        </button>
+        <button class="Botao">
+            <img src="img/bill.png" alt="Ícone" class="Icone">
+            Relatórios
+        </button>
+        <button class="Botao">
+            <img src="img/perfil.png" alt="Ícone" class="Icone">
+            Meu Perfil
+        </button>
+    </div>
+    <button class="Sair" onClick="location.href='index.html'">Sair</button>
+</div>
+
+
+</body>
+</html>
