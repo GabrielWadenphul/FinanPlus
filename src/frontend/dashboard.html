@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Finan+ | Acompanhe Suas Finanças de Modo Simples!</title>
-    <link rel="stylesheet" href="pag1.css">
+    <link rel="stylesheet" href="dashboard.css">
 </head>
-<body>
+<body class="body">
 <div class="Hero">
     <h1>Bem vindo à Finan+</h1>
 </div>
 
 <div class="Dashboard">
     <h1>Visão Geral das Finanças </h1>
-    <p>Dados atualizados no mês atual</p>
+    <p>Dados atualizados no mês atual.</p>
 </div>
 
 <div class="container-cards">
@@ -94,6 +94,9 @@
                 <td>R$ 35,00</td>
             </tr>
             </tbody>
+            <div class="Texto-container">
+                <h3>Transações Recentes</h3>
+            </div>
         </table>
     </div>
 
@@ -105,7 +108,7 @@
             <img src="img/dashboard.png" alt="Ícone" class="Icone">
             Dashboard
         </button>
-        <button class="Botao">
+        <button class="Botao" onClick="location.href='transacoes.html'">
             <img src="img/money.png" alt="Ícone" class="Icone">
             Transações
         </button>
@@ -113,7 +116,7 @@
             <img src="img/bill.png" alt="Ícone" class="Icone">
             Relatórios
         </button>
-        <button class="Botao">
+        <button class="Botao" onClick="location.href='perfil.html'">
             <img src="img/perfil.png" alt="Ícone" class="Icone">
             Meu Perfil
         </button>

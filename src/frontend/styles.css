@@ -111,24 +111,39 @@ p, h3, label {
 }
 
 .botao {
-    text-decoration: none;
     background-color: #E2E8F0;
-    font-family: 'Inter', sans-serif;
     color: #0F172A;
     border: 5px;
-    border-radius: 5px;
+    border-radius: 8px;
     padding: 1px 5px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     position: relative;
     height: 30px;
     width: 200px;
     top: 30px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 .botao:hover {
-    background-color: #CBD5F5;
+    background-color: #0f2b36;
+    color: white;
     transform: translateY(-2px);
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+.Cadastro {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 40px;
 }
 
 .footer {

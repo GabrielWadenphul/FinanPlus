@@ -23,6 +23,11 @@
         font-size: medium;
     }
 
+    .Texto-container {
+        display: flex;
+        justify-content: center;
+    }
+
     h3 {
         color: black;
         font-weight: bold;
