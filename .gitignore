@@ -10,3 +10,9 @@ yarn-error.log*
 
 .vscode/*
 .env
+
+node_modules/
+src/backend/Config/node_modules/
+src/backend/node_modules/
+
+.idea/
