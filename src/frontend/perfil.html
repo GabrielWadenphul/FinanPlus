@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Finan+ | Meu Perfil</title>
     <link rel="stylesheet" href="perfil.css">
+    <script src="script.js"></script>
 </head>
 <body class="body">
 <div class="Hero">
@@ -21,9 +22,9 @@
 
         <div class="Email">
             <h2>⚙️ Dados da Conta</h2>
-            <label class="Textos" for="email">E-mail:
+            <label class="Textos" for="usuario">Usuário:
             </label>
-            <input class="Input-email" type="text" id="email"
+            <input class="usuario" type="text" id="usuario"
                    maxlength="50" minlength="3" rows="1" cols="30" placeholder="Digite aqui...">
             </textarea">
         </div>
@@ -42,7 +43,7 @@
             <input id="confirmar" type="password" name="confirmarSenha" placeholder="Digite aqui..." required>
         </div>
         <div class="Atualizar-container">
-            <button class="Atualizar">Atualizar Acesso</button>
+            <button id="atualizar-acesso" class="Atualizar">Atualizar Acesso</button>
         </div>
     </div>
 
@@ -139,11 +140,11 @@
         </div>
 
         <div class="Atualizar-container">
-            <button class="Atualizar">Salvar Alterações</button>
+            <button id="atualizar-perfil" class="Atualizar">Salvar Alterações</button>
         </div>
 
         <div class="Excluir-container">
-            <button class="Excluir">Excluir Perfil</button>
+            <button id="excluir-usuario" class="Excluir">Excluir Perfil</button>
         </div>
     </div>
 </div>
