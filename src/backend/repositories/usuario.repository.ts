@@ -5,11 +5,14 @@ export class UsuarioRepository {
 
     async autenticar(nome_usuario: string, senha_hash: string): Promise<Usuario | null> {
         const sql = `
-            SELECT *
-            FROM usuarios
-            WHERE nome_usuario = $1
-              AND senha_hash = $2
-              AND ativo = true
+            SELECT
+                u.id,
+                u.nome_usuario,
+                u.senha_hash,
+                p.id as perfil_id
+            FROM usuarios u
+                     INNER JOIN perfis p ON u.id = p.usuario_id
+            WHERE u.nome_usuario = $1 AND u.senha_hash = $2 AND u.ativo = true;
         `;
         const resultado = await pool.query(sql, [nome_usuario, senha_hash]);
 

@@ -5,4 +5,5 @@ export interface Usuario {
     senha_hash: string;
     ativo: boolean;
     data_criacao?: Date;
+    perfil_id?: number;
 }

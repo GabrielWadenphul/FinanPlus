@@ -37,6 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (resposta.status === 201) {
                     alert("Cadastro realizado com sucesso! Bem-vindo ao Finan+.");
+
+                    localStorage.setItem('idUsuarioLogado', resultado.usuarioId);
+                    localStorage.setItem('idPerfilAtivo', resultado.perfilId);
+
                     window.location.href = 'dashboard.html';
                 } else {
                     alert("Erro ao cadastrar: " + resultado.mensagem);
@@ -195,6 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (resposta.status === 200) {
                     alert("Bem-vindo de volta ao Finan+!");
                     localStorage.setItem('idUsuarioLogado', resultado.usuarioId);
+                    localStorage.setItem('idPerfilAtivo', resultado.perfilId);
                     window.location.href = 'dashboard.html';
                 } else {
                     alert("Erro: " + resultado.mensagem);

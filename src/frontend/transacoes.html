@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Finan+ | Transações</title>
     <link rel="stylesheet" href="transacoes.css">
+    <script src="inserts.js" defer></script>
 </head>
 <body class="body">
 <div class="Hero">
@@ -47,25 +48,80 @@
 
             <div class="Tipo-bar">
                 <label for="categoria">Categoria:</label>
-                <select id="categoria" name="categoria">
-                    <option value="receita">🍕 Alimentação</option>
-                    <option value="despesa">🚗 Transporte</option>
-                    <option value="receita">🏠 Aluguel</option>
-                    <option value="despesa">🧾 Contas</option>
+                <select id="categoria">
+                    <option value="" disabled selected>Carregando categorias...</option>
                 </select>
             </div>
             <br>
-
-            <div class="Ações">
-                <button class="Adicionar" id="adicionar">Adicionar</button>
-            </div>
 
             <div class="Ações">
                 <button class="Filtrar" id="filtrar">Filtrar</button>
             </div>
 
             <div class="Ações">
-                <button class="Excluir" id="excluir">Excluir</button>
+                <button id="abrir-pop-up" class="Adicionar">Adicionar</button>
+            </div>
+
+            <div id="pop-up" class="Pop-up-container">
+
+                <div class="Pop-up-conteudo">
+
+                    <span class="fechar-pop-up">&times;</span>
+
+                    <h3>Adicionar nova Transação</h3>
+
+                    <div class="Card-Transacao">
+
+                        <div class="Linha">
+                            <div>
+                                <label>Data:</label>
+                                <input class="Input-transacao" type="date" id="dataTransacao">
+                            </div>
+
+                            <div class="Tipo-bar">
+                                <label for="tipo">Tipo:</label>
+                                <select id="tipoTransacao" name="tipo">
+                                    <option value="receita">Receita</option>
+                                    <option value="despesa">Despesa</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="Linha">
+                            <div>
+                                <label>Categoria:</label>
+                                <select id="categoriaTransacao">
+                                    <option value="" disabled selected>Carregando categorias...</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label>Valor:</label>
+                                <input class="Input-transacao" id="valorTransacao" type="number" step="0.01"
+                                       placeholder="0.00">
+                            </div>
+                        </div>
+
+                        <div class="Linha">
+                            <div>
+                                <label>Descrição:</label>
+                                <input class="Input-transacao" id="descricaoTransacao" type="text"
+                                       placeholder="Descrição da Transação">
+                            </div>
+
+                            <div>
+                                <label>Número de Parcelas:</label>
+                                <input class="Input-transacao" id="numParcelas" type="number" value="1">
+                            </div>
+                        </div>
+
+                        <div class="Botoes">
+                            <button id="cancelar-transacao" class="Cancelar">Cancelar</button>
+                            <button id="adicionar-transacao" class="Adicionar">Adicionar</button>
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -79,41 +135,101 @@
                 <th scope="col">Data</th>
                 <th scope="col">Descrição</th>
                 <th scope="col">Categoria</th>
+                <th scope="col">Tipo</th>
                 <th scope="col">Valor</th>
             </tr>
             </thead>
             <tbody>
             <tr>
                 <th scope="row">1</th>
-                <td>01/04</td>
-                <td>Supermercado</td>
-                <td>Alimentação</td>
-                <td>R$ 685,00</td>
             </tr>
             <tr>
                 <th scope="row">2</th>
-                <td>02/04</td>
-                <td>Padaria</td>
-                <td>Alimentação</td>
-                <td>R$ 25,50</td>
             </tr>
             <tr>
                 <th scope="row">3</th>
-                <td>03/04</td>
-                <td>Uber</td>
-                <td>Transporte</td>
-                <td>R$ 20,00</td>
             </tr>
             <tr>
                 <th scope="row">4</th>
-                <td>04/04</td>
-                <td>Lanche</td>
-                <td>Alimentação</td>
-                <td>R$ 35,00</td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
             </tr>
             </tbody>
-                <h3>Transações Completas</h3>
+            <h3>Transações Completas</h3>
         </table>
+    </div>
+
+    <div class="Crud-tabela">
+        <div class="Editar-tabela">
+            <button id="editar-pop-up" class="Editar" id="editar">Editar</button>
+        </div>
+
+        <div id="editar-popup" class="Pop-up-container">
+
+            <div class="Pop-up-conteudo">
+
+                <span class="fechar-edicao">&times;</span>
+
+                <h3>Editar Transação</h3>
+
+                <div class="Card-Transacao">
+
+                    <div class="Linha">
+                        <div>
+                            <label>Data:</label>
+                            <input class="Input-transacao" type="date" id="editarData">
+                        </div>
+
+                        <div class="Tipo-bar">
+                            <label for="tipo">Tipo:</label>
+                            <select id="editarTipo" name="tipo">
+                                <option value="receita">Receita</option>
+                                <option value="despesa">Despesa</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="Linha">
+                        <div>
+                            <label>Categoria:</label>
+                            <select id="editarCategoria">
+                                <option value="" disabled selected>Carregando categorias...</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label>Valor:</label>
+                            <input class="Input-transacao" id="editarValor" type="number" step="0.01"
+                                   placeholder="0.00">
+                        </div>
+                    </div>
+
+                    <div class="Linha">
+                        <div>
+                            <label>Descrição:</label>
+                            <input class="Input-transacao" id="editarDescricao" type="text"
+                                   placeholder="Descrição da Transação">
+                        </div>
+
+                        <div>
+                            <label>Número de Parcelas:</label>
+                            <input class="Input-transacao" id="editarParcelas" type="number" value="1">
+                        </div>
+                    </div>
+
+                    <div class="Botoes">
+                        <button id="cancelar-edicao" class="Cancelar">Cancelar</button>
+                        <button id="editar-transacao" class="Adicionar">Editar</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="Excluir-tabela">
+            <button class="Excluir" id="excluir">Excluir</button>
+        </div>
     </div>
 
     <div class="Secao">
@@ -139,5 +255,7 @@
         <button class="Sair" onClick="location.href='index.html'">Sair</button>
     </div>
 
+    <script src="pop-ups.js"></script>
+</div>
 </body>
 </html>
